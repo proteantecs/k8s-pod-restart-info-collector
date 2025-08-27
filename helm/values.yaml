@@ -4,12 +4,12 @@
 
 
 # clusterName: "Change-Me"
-# slackWebhookUrl: "https://hooks.slack.com/services/Change-Me"
+slackWebhookUrl: "https://hooks.slack.com/services/Change-Me"
 #slackWebhookUrlSecretKeyRef:
 #  key: "slackWebhookUrl"
 #  name: "k8s-pod-restart-info-collector"
-slackChannel: "restart-info-nonprod"
-slackUsername: "k8s-pod-restart-info-collector"
+#slackChannel: "restart-info-nonprod"
+#slackUsername: "k8s-pod-restart-info-collector"
 muteSeconds: 600
 ignoreRestartCount: 30
 
@@ -27,18 +27,20 @@ watchedPodNamePrefixes: ""
 ignoreRestartsWithExitCodeZero: false
 
 image:
-  repository: devopsairwallex/k8s-pod-restart-info-collector
-  tag: "v1.4.0"
+  repository: proteantecs/k8s-pod-restart-info-collector
+  tag: "master"
 
 resources: 
   limits:
-    cpu: 50m
-    memory: 100Mi
+    cpu: 100m
+    memory: 200Mi
   requests:
     cpu: 20m
     memory: 50Mi
 
-imagePullSecrets: []
+imagePullSecrets:
+    - name: registerykey
+
 nameOverride: ""
 fullnameOverride: ""
 

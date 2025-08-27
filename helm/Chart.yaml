@@ -1,6 +1,6 @@
 apiVersion: v2
 name: k8s-pod-restart-info-collector
-description: A Helm chart for Kubernetes
+description: A Helm chart for Kubernetes Pod Restart Info Collector - monitors pod restarts and sends notifications to Slack
 
 # A chart can be either an 'application' or a 'library' chart.
 #
@@ -9,7 +9,7 @@ description: A Helm chart for Kubernetes
 #
 # Library charts provide useful utilities or functions for the chart developer. They're included as
 # a dependency of application charts to inject those utilities and functions into the rendering
-# pipeline. Library charts do not define any templates and therefore cannot be deployed.
+# pipeline. Library charts are not expected to define any templates and therefore cannot be deployed.
 type: application
 
 # This is the chart version. This version number should be incremented each time you make changes
@@ -20,4 +20,4 @@ version: 0.1.0
 # This is the version number of the application being deployed. This version number should be
 # incremented each time you make changes to the application. Versions are not expected to
 # follow Semantic Versioning. They should reflect the version the application is using.
-appVersion: 1.16.0
+appVersion: 1.21.0
